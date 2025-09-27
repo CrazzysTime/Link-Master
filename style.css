@@ -1,0 +1,60 @@
+h1 {
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0px solid black;
+    color: rgb(25, 0, 255);
+    float: center;
+    animation: colorShift 2s linear infinite alternate;
+}
+
+@keyframes colorShift {
+    from { color: rgb(66, 35, 35); }
+    to { color: blue; }
+    to { color: rgb(255, 0, 157);}
+    to { color: green;}
+    to { color: pink;}
+    to { color: purple;}
+}
+
+h2 {
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0px solid black;
+    color: red;
+    float: center;
+    animation: colorShift 2s linear infinite alternate;
+}
+
+@keyframes colorShift {
+    from { color: rgb(31, 250, 2); }
+    to { color: blue; }
+    to { color: rgb(255, 0, 157);}
+    to { color: pink;}
+    to { color: purple;}
+}
+
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    margin: 20px;
+    overflow: auto;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: hsl(0, 9%, 31%);
+}
+.navbar li{
+    float: left;
+}

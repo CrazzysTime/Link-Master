@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="icon" type="image/png" href="link_masters.png">
+  <style>
+    body {
+      background-color: rgb(5, 185, 240);
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center; 
+      align-items: center;     
+      font-family: Arial, sans-serif;
+    }
+
+    .login-box {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input {
+      padding: 5px;
+      margin-bottom: 10px;
+      width: 200px;
+    }
+
+    button {
+      padding: 5px 15px;
+      cursor: pointer;
+    } 
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2><mark>Login to go to Link Masters official web page.</mark></h2>
+    <form onsubmit="return login()">
+      <label>Username:</label>
+      <input type="text" id="username" required><br><br>
+
+      <label>Password:</label>
+      <input type="password" id="password" required><br><br>
+
+      <button type="submit">Login to continue</button>
+    </form>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      const correctUser = "megatitok";
+      const correctPass = "öröktitok";
+
+      if (user === correctUser && pass === correctPass) {
+        window.location.href = "web.html"; 
+        return false;
+      } else {
+        alert("Wrong username or password!");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
